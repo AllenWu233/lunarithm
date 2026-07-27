@@ -12,13 +12,21 @@ lastmod: "2026-07-27"
 - [清絮](https://blog.linioi.com)
   - 人生如逆旅，我亦是行人
 - [lilydjwg 依云](https://blog.lilydjwg.me/)
-  - 百合仙子，Arch Linux CN 社区管理者之一
-- [Yunyi's Blog](https://www.yunyitang.me/zh/)
-  - Little squirrel Hopping around
+  - 【Allen 评：百合仙子，Arch Linux CN 社区管理者之一】
+- [Yunyi's Blog](https://www.yunyitang.me/)
+  - 得闲饮茶～～～
 - [阮一峰](https://www.ruanyifeng.com/)
-  - 坚持更新网络日志，将博客精神体现得淋漓尽致
+  - 【Allen 评：坚持更新网络日志，将博客精神体现得淋漓尽致】
 - [彼岸花开](https://pxyfcywl.netlify.app)
   - 欢迎！高洁而真诚的灵魂
+- [帅秃顶](https://145914.xyz/)
+  - 帅秃顶的博客
+
+## 可能已经失效的友链
+
+> 如果你的友链被错误地移到了这里，或信息需要更新，请在评论区留言。
+
+- （无）
 
 ## 又一条新航线
 
