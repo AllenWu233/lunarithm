@@ -41,7 +41,7 @@ class Me:
 
 取自自造词：`Lunarithm = Lunar + Rhythm`，译为“冰轮韵”。
 
-月的意象受[The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon)、[Fall in the Dark](https://thwiki.cc/%E6%AD%8C%E8%AF%8D:Fall_in_the_Dark)、[宵暗舞者](https://store.steampowered.com/app/1998530/Yoiyami_Dancers_Twilight_Danmaku_Dancers/)的启发；“韵”即为音韵，可延伸为文章、代码的风格。
+月的意象受[The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon)、[Fall in the Dark](https://thwiki.cc/%E6%AD%8C%E8%AF%8D:Fall_in_the_Dark)和[宵暗舞者](https://store.steampowered.com/app/1998530/Yoiyami_Dancers_Twilight_Danmaku_Dancers/)等的启发；“韵”即为音韵，可延伸为文章、代码的风格。
 
 #### 前站名：逍遥乡
 

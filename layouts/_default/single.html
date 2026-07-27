@@ -3,7 +3,11 @@
   <h1>{{ .Title | markdownify }}</h1>
 </header>
 <div class="content__body">{{ .Content }}</div>
-<footer class="content__footer">{{ partial "giscus.html" . }}</footer>
+<footer class="content__footer">
+  <!-- Load KaTeX assets conditionally -->
+  {{ if or .Params.math .Site.Params.math }} {{ partial "math.html" . }} {{ end
+  }} {{ partial "giscus.html" . }}
+</footer>
 {{ end }} {{ define "aside" }} {{ if .Params.description }}
 <p>{{ .Params.description }}</p>
 {{ end }} {{ if or (.Params.author) (.Params.date) }}

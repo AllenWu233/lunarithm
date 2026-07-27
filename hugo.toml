@@ -22,6 +22,7 @@ copyrightStartYear = 2022
 prompt = "Allen@lunarithm"
 homePagePosts = 7
 comments = true
+math = true
 
 noindex = false
 
