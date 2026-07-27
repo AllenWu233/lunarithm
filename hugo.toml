@@ -19,8 +19,8 @@ pagerSize = 3
 # NOTE: Customed by Allen
 copyrightStartYear = 2022
 prompt = "Allen@lunarithm"
-homePagePosts = 6
-#
+homePagePosts = 7
+
 noindex = false
 
 [params.theme]
