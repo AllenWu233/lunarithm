@@ -1,0 +1,49 @@
+{{ define "main" }}
+    <div class="content__body">
+        {{ .Content }}
+    </div>
+
+    {{ $limit := .Site.Params.homePagePosts | default 10 }}
+
+    <div class="posts-section">
+        <h2><a href="/categories/月魂/">月魂</a></h2>
+        {{ $yuehun := where .Site.RegularPages "Params.categories" "in" "月魂" }}
+        <ul class="posts">
+            {{ range first $limit $yuehun }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                    {{ with .Description }}
+                        <p class="post-description">{{ . }}</p>
+                    {{ end }}
+                </li>
+            {{ else }}
+                <li>暂无月魂文章。</li>
+            {{ end }}
+        </ul>
+        {{ if gt (len $yuehun) $limit }}
+            <p class="more"><a href="/categories/月魂/">（查看更多……）</a></p>
+        {{ end }}
+    </div>
+
+    <div class="posts-section">
+        <h2><a href="/categories/月韵/">月韵</a></h2>
+        {{ $yueyun := where .Site.RegularPages "Params.categories" "in" "月韵" }}
+        <ul class="posts">
+            {{ range first $limit $yueyun }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                    {{ with .Description }}
+                        <p class="post-description">{{ . }}</p>
+                    {{ end }}
+                </li>
+            {{ else }}
+                <li>暂无月韵文章。</li>
+            {{ end }}
+        </ul>
+        {{ if gt (len $yueyun) $limit }}
+            <p class="more"><a href="/categories/月韵/">（查看更多……）</a></p>
+        {{ end }}
+    </div>
+{{ end }}

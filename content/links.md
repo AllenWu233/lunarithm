@@ -1,0 +1,46 @@
+---
+title: 月渡
+comments: true
+description: "有朋自远方来，不亦乐乎？"
+author: Allen
+date: "2022-08-26"
+lastmod: "2026-07-27"
+---
+
+## 友链
+
+- [清絮](https://blog.linioi.com)
+  - 人生如逆旅，我亦是行人
+- [lilydjwg 依云](https://blog.lilydjwg.me/)
+  - 百合仙子，Arch Linux CN 社区管理者之一
+- [Yunyi's Blog](https://www.yunyitang.me/zh/)
+  - Little squirrel Hopping around
+- [阮一峰](https://www.ruanyifeng.com/)
+  - 坚持更新网络日志，将博客精神体现得淋漓尽致
+- [彼岸花开](https://pxyfcywl.netlify.app)
+  - 欢迎！高洁而真诚的灵魂
+
+## 又一条新航线
+
+欢迎在评论区留下你的个人站点链接，可按以下格式：
+
+```yaml
+title: # 站点名
+author: # 你的名字
+description: # 一句话个人或站点简介
+url: # 个人网站地址
+avatar: # 头像链接（可选）
+```
+
+本站信息，请随意添加：
+
+```yaml
+title: 冰轮韵
+author: Allen
+description: 冰轮舞韵，代码淬魂。
+url: https://lunarithm.space
+avatar: https://lunarithm.space/img/avatar.png
+favicon: https://lunarithm.space/img/favicon/favicon-32x32.png
+```
+
+🍻欢迎友好交流！不要吝啬你的友链！

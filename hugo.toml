@@ -1,0 +1,158 @@
+baseURL = 'https://lunarithm.space/'
+theme = "risotto"
+title = '冰轮韵'
+author = "Allen"
+languageCode = "zh-cn"
+DefaultContentLanguage = "zh-cn"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+# Automatically add content sections to main menu
+# sectionPagesMenu = "main"
+
+[pagination]
+pagerSize = 3
+
+[params]
+# NOTE: Customed by Allen
+copyrightStartYear = 2022
+prompt = "Allen@lunarithm"
+homePagePosts = 6
+#
+noindex = false
+
+[params.theme]
+palette = "tokyo-night-dark"
+
+# Sidebar: about/bio
+[params.about]
+title = "冰轮韵"
+description = "冰轮舞韵，代码淬魂。<br>天地与我并生，而万物与我为一。"
+# unicode/emoji logo:
+logo = "🌔"
+# or use an image:
+# logo_image = "images/rice.svg"
+
+# Sidebar: social links
+# Available icon sets:
+# * FontAwesome 6 <https://fontawesome.com/> ('fa-brands', 'fa-normal', or 'fa-solid' for brands)
+# * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/AllenWu233/"
+
+[[params.socialLinks]]
+icon = "fab fa-bilibili"
+title = "BiliBili"
+url = "https://space.bilibili.com/313610599"
+
+[[params.socialLinks]]
+icon = "fas fa-mug-hot"
+title = "Ko-fi"
+url = "https://ko-fi.com/allenwu233"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:allenwu233@outlook.com"
+
+[[params.socialLinks]]
+icon = "fas fa-rss"
+title = "RSS"
+url = "/index.xml"
+
+
+[menu]
+
+# [[menu.main]]
+# identifier = "tech"
+# name = "月魂"
+# url = "/categories/月魂/"
+# weight = 10
+#
+# [[menu.main]]
+# identifier = "essay"
+# name = "月韵"
+# url = "/categories/月韵/"
+# weight = 20
+
+[[menu.main]]
+identifier = "series"
+name = "月轨"
+url = "/series/"
+weight = 30
+
+[[menu.main]]
+identifier = "categories"
+name = "月影"
+url = "/categories/"
+weight = 40
+
+# [[menu.main]]
+# identifier = "tags"
+# name = "月痕"
+# url = "/tags/"
+# weight = 50
+
+[[menu.main]]
+identifier = "links"
+name = "月渡"
+url = "/links/"
+weight = 80
+
+[[menu.main]]
+identifier = "about"
+name = "逍遥乡"
+url = "/about/"
+weight = 90
+
+
+[taxonomies]
+category = "categories"
+# tag = "tags"
+series = "series"
+
+
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+
+# Table of contents
+# Add toc = true to content front matter to enable
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = true
+
+[privacy]
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.x]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services]
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.x]
+disableInlineCSS = true
