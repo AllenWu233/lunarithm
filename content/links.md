@@ -30,6 +30,7 @@ author: # 你的名字
 description: # 一句话个人或站点简介
 url: # 个人网站地址
 avatar: # 头像链接（可选）
+favicon: # 网站图标链接（可选）
 ```
 
 本站信息，请随意添加：
@@ -37,10 +38,9 @@ avatar: # 头像链接（可选）
 ```yaml
 title: 冰轮韵
 author: Allen
-description: 冰轮舞韵，代码淬魂。
+description: 冰轮舞韵，代码凝魂。
 url: https://lunarithm.space
-avatar: https://lunarithm.space/img/avatar.png
-favicon: https://lunarithm.space/img/favicon/favicon-32x32.png
+favicon: https://lunarithm.space/favicon-32x32.png
 ```
 
 🍻欢迎友好交流！不要吝啬你的友链！

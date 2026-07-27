@@ -32,7 +32,7 @@ palette = "tokyo-night-dark"
 # Sidebar: about/bio
 [params.about]
 title = "冰轮韵"
-description = "冰轮舞韵，代码淬魂。<br>天地与我并生，而万物与我为一。"
+description = "冰轮舞韵，代码凝魂。<br>天地与我并生，而万物与我为一。"
 # unicode/emoji logo:
 logo = "🌔"
 # or use an image:
