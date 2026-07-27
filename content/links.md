@@ -40,6 +40,7 @@ title: 冰轮韵
 author: Allen
 description: 冰轮舞韵，代码凝魂。
 url: https://lunarithm.space
+avatar: https://lunarithm.space/avatar.jpg
 favicon: https://lunarithm.space/favicon-32x32.png
 ```
 
