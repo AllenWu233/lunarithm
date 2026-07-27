@@ -2,7 +2,8 @@ baseURL = 'https://lunarithm.space/'
 theme = "risotto"
 title = '冰轮韵'
 author = "Allen"
-languageCode = "zh-cn"
+# languageCode = "zh-cn"
+locale = "zh-cn"
 DefaultContentLanguage = "zh-cn"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
@@ -20,6 +21,7 @@ pagerSize = 3
 copyrightStartYear = 2022
 prompt = "Allen@lunarithm"
 homePagePosts = 7
+comments = true
 
 noindex = false
 
