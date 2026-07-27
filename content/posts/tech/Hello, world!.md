@@ -21,3 +21,5 @@ Python苦手不会用Django搭建博客，连夜转战hugo（迫真
 for _ in range(10):
     print("Hello world!")
 ```
+
+![Hina](hello-world.jpg)

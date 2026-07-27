@@ -3,12 +3,12 @@ title: "C语言初学者的汉诺塔"
 date: 2022-09-11
 slug: hanoi
 description: 与算法的邂逅
-cover:
-  image: hanoi_cover.jpg
 categories: "月魂"
 series: "Allen的算法基础"
 tags: [算法, 递归, C, Python, 模拟]
 ---
+
+![Cover](hanoi_cover.jpg)
 
 ## 引言
 

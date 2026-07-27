@@ -4,12 +4,12 @@ slug: redmi-note-12-trubo-flash
 description: "生命在于折腾。"
 date: 2024-03-26T20:32:38+08:00
 lastmod: 2025-12-07T10:52:00+08:00
-cover:
-  image: "/img/lineageos-download-rom-nougat.jpg"
 tags: ["刷机", "Android", "root", "Magisk", "LineageOS", "类原生", "手机"]
 series: "教程"
 categories: "月魂"
 ---
+
+![](lineageos-download-rom-nougat.jpg)
 
 ## 引言
 

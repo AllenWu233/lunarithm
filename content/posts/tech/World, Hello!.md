@@ -1,11 +1,9 @@
 ---
 title: "World, Hello!"
 slug: worldhello
-description: "不仅仅是 Hello world"
+description: "“不仅仅是 Hello world。”"
 date: 2023-05-24T22:51:26+08:00
 lastmod:
-cover:
-  image: /img/108137556_p0.jpg
 categories: "月魂"
 tags: ["Hugo", "Blog", "Rust"]
 ---
@@ -38,3 +36,7 @@ fn main() {
 ```
 
 灵感来自：[不仅仅是 Hello world](https://course.rs/first-try/hello-world.html)
+
+<div style="text-align: center;">
+  <img src="/images/world-hello.jpg" alt="Koishi" width="40%">
+</div>

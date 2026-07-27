@@ -4,23 +4,22 @@ description: 来下国际象棋吧
 date: 2023-01-09T18:33:00+08:00
 lastmod: 2023-01-09T18:33:00+08:00
 slug: uva439
-cover:
-  image: /img/uva439_cover.jpg
 tags: [题解, 算法, 图, 最短路, BFS, 队列, C++]
 series: "ACM题解"
 categories: "月魂"
 ---
 
-![](content/zh/posts/UVa%20439%20Knight%20Moves/cover_.jpg)
-第一次写题解惹~
+![](uva439_cover.jpg)
 
-简单，但是卡了好一会，最后发现是忘了清零数组 XD
+第一次写题解~
+
+~简单，但是卡了好一会，最后发现是忘了清零数组 XD~
 
 题目：[洛谷·UVa439](https://www.luogu.com.cn/problem/UVA439)
 
 ## 题意
 
-输入8\*8国际象棋棋盘的两个坐标（起点和终点。列：a~h，行：1~8），求出马（Knight）从起点到终点所需最少步数
+输入8\*8国际象棋棋盘的两个坐标（起点和终点。列：a\~h，行：1\~8），求出`马（Knight）`从起点到终点所需最少步数
 
 ## 分析
 
@@ -84,20 +83,19 @@ int main() {
 
 > c++\_acm.sublime-build
 
-```
+```json
 {
-   "shell_cmd": "g++ -finput-charset=UTF-8 -fexec-charset=GBK -Wall -DLOCAL \"${file_name}\" -o \"${file_base_name}\" && ${file_base_name} && echo Press ENTER to continue...",
-   "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-   "working_dir": "${file_path}",
-   "selector": "source.c++",
-   "encoding": "gbk",
-   "variants":
-   [
-       {
-           "name": "Single File Build & Run in cmd",
-           "shell_cmd": "g++ -finput-charset=UTF-8 -fexec-charset=GBK -g -Wall \"${file_name}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_base_name}\" & pause\""
-       }
-   ]
+  "shell_cmd": "g++ -finput-charset=UTF-8 -fexec-charset=GBK -Wall -DLOCAL \"${file_name}\" -o \"${file_base_name}\" && ${file_base_name} && echo Press ENTER to continue...",
+  "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+  "working_dir": "${file_path}",
+  "selector": "source.c++",
+  "encoding": "gbk",
+  "variants": [
+    {
+      "name": "Single File Build & Run in cmd",
+      "shell_cmd": "g++ -finput-charset=UTF-8 -fexec-charset=GBK -g -Wall \"${file_name}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_base_name}\" & pause\""
+    }
+  ]
 }
 ```
 

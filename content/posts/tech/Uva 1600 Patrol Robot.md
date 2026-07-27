@@ -9,7 +9,7 @@ series: "ACM题解"
 tags: [题解, 算法, 图, 最短路, BFS, 队列, C++, Python]
 ---
 
-题目：[洛谷·UVa439](https://www.luogu.com.cn/problem/UVA1600)
+题目：[UVA1600 巡逻机器人 Patrol Robot](https://www.luogu.com.cn/problem/UVA1600)
 
 ## 题意
 
