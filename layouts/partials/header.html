@@ -1,5 +1,12 @@
 <nav class="page__nav main-nav">
     <ul>
+      <!-- Site avatar -->
+      <li class="nomarker avatar-container">
+        <a href="{{ .Site.BaseURL }}" class="avatar-link">
+          <img src="/avatar.jpg" alt="Avatar" class="site-avatar" />
+        </a>
+      </li>
+
       <li class="nomarker"><h1 class="page__logo"><a href="{{ .Site.BaseURL }}" class="page__logo-inner">{{ .Site.Params.prompt }}</a></h1></li>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
@@ -8,3 +15,20 @@
     </ul>
 </nav>
 
+<style>
+  /* Circular avatar image */
+  .site-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    <!-- transition: transform 0.2s ease-in-out; -->
+  }
+  
+  /* Hover zoom effect */
+  .site-avatar:hover {
+    transform: scale(1.05);
+  }
+</style>

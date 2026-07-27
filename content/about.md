@@ -32,6 +32,7 @@ class Me:
 
 - [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) 爱好者，自从用上了 Arch Linux 之后更是一发不可收抬 ~~（有一定程度的开源洁癖）~~
 - 很爱折腾（从各种杂七杂八的[教程](/categories/教程)可见一斑）
+- 头像出处：[Pid: 124303653](https://www.pixiv.net/artworks/124303653)，灵感来源于[救済の技法（Technique of Relief）](https://en.wikipedia.org/wiki/Technique_of_Relief)
 
 ## 关于本站
 
@@ -43,9 +44,13 @@ class Me:
 
 月的意象受[The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon)、[Fall in the Dark](https://thwiki.cc/%E6%AD%8C%E8%AF%8D:Fall_in_the_Dark)和[宵暗舞者](https://store.steampowered.com/app/1998530/Yoiyami_Dancers_Twilight_Danmaku_Dancers/)等的启发；“韵”即为音韵，可延伸为文章、代码的风格。
 
+站图标源于：[Outer Wilds - 量子卫星](https://wiki.biligame.com/outerwilds/%E9%A6%96%E9%A1%B5)
+
 #### 前站名：逍遥乡
 
 「逍遥」取自《庄子·内篇·逍遥游》，同时还很喜欢陶渊明笔下那种田园牧歌般的生活，于是为一个 Minecraft 原版生存存档命名为「逍遥乡」，寓意「心灵舒放之地」。前站名也借用了这个名称。现用作 About 页面的标题。
+
+前站图标源于：[Outer Wilds - 木炉星](https://wiki.biligame.com/outerwilds/%E6%9C%A8%E7%82%89%E6%98%9F)
 
 ### 网站变迁
 

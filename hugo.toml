@@ -34,9 +34,9 @@ palette = "tokyo-night-dark"
 title = "冰轮韵"
 description = "冰轮舞韵，代码凝魂。<br>天地与我并生，而万物与我为一。"
 # unicode/emoji logo:
-logo = "🌔"
+# logo = "🌔"
 # or use an image:
-# logo_image = "images/rice.svg"
+logo_image = "favicon.ico"
 
 # Sidebar: social links
 # Available icon sets:
