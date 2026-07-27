@@ -6,7 +6,7 @@ date: "2022-08-26"
 lastmod: "2026-07-27"
 ---
 
-<center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=3132481&auto=1&height=90"></iframe></center>
+<center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=1&id=3132481&auto=0&height=90"></iframe></center>
 
 ## 欢迎来到又一座“孤岛”
 
