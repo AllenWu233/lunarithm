@@ -21,6 +21,8 @@ lastmod: "2026-07-27"
   - 欢迎！高洁而真诚的灵魂
 - [帅秃顶](https://145914.xyz/)
   - 帅秃顶的博客
+- [Soulter’s Blog](https://blog.soulter.top)
+  - Developer & ACG & ...
 
 ## 可能已经迷失的伙伴
 
@@ -50,6 +52,14 @@ description: 冰轮舞韵，代码凝魂。
 url: https://lunarithm.space
 avatar: https://lunarithm.space/avatar.jpg
 favicon: https://lunarithm.space/favicon-32x32.png
+```
+
+简洁版（title 与 author 并为一行）：
+
+```yaml
+title: Allen@冰轮韵
+description: 冰轮舞韵，代码凝魂。
+url: https://lunarithm.space
 ```
 
 🍻欢迎友好交流！不要吝啬你的友链！
