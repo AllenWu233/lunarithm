@@ -23,6 +23,8 @@ lastmod: "2026-07-27"
   - 帅秃顶的博客
 - [Soulter’s Blog](https://blog.soulter.top)
   - Developer & ACG & ...
+- [Mark 的自留地](https://markxu.icu)
+  - 慢慢更新，慢慢打磨，认真分享，认真生活！
 
 ## 可能已经迷失的伙伴
 
