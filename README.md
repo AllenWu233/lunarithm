@@ -1,8 +1,8 @@
-## Allen's World
+## Allen@lunarithm
 
 Source code of my personal blog.
 
-## Installing
+## Clone
 
 ```bash
 git clone https://github.com/AllenWu233/lunarithm.git
