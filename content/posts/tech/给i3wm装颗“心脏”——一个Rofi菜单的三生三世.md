@@ -223,13 +223,16 @@ fi
 虽然 2.0 解决了维护不便的问题，但是引入了许多“黑魔法”——地道、优雅且高级的现代 Bash 技巧。
 ~~对于并不精通 Bash 的我，脚本写完后今天还能看懂，几周后只有上帝和 AI 能看懂了 XD。~~
 
-换言之，语法过于高级和精简、逻辑复杂的代码，维护起来是地狱级难度——比如哪天想换成 Fuzzel 或 Wofi 作为 dmenu 后端，就要先把之前的代码都捋一遍。即使是精通 Shell 的高手，也得皱着眉头看半天吧。
+换言之，语法过于高级和精简、逻辑复杂的代码，维护起来是地狱级难度——
+比如哪天想换成 Fuzzel 或 Wofi 作为 dmenu 后端，就要先把之前的代码都捋一遍。即使是精通 Shell 的高手，也得皱着眉头看半天吧。
 
 正处踌躇之际，我突然想起我的白月光——Python！复杂脚本就应该交给脚本语言！
 
-没有什么比抽象成类更合适的了：
+没有什么比抽象成类更合适的了。Python 中开启了 `slots=True, frozen=True` 的 `dataclass`，
+简直就是 Rust 界的 `#[derive(Debug, PartialEq)] struct`，既消除了样板代码，又保证了只读与紧凑的内存布局：
 
 ```Python
+# Immutable, memory-optimized data container for menu items.
 @dataclass(slots=True, frozen=True)
 class Item:
     key: str
