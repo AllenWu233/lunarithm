@@ -25,6 +25,10 @@ lastmod: "2026-07-27"
   - Developer & ACG & ...
 - [Mark 的自留地](https://markxu.icu)
   - 慢慢更新，慢慢打磨，认真分享，认真生活！
+- [纸鹿本鹿](https://blog.zhilu.site/)
+  - 纸鹿至麓不知路，支炉制露不止漉
+- [里世界](https://leenet.xyz)
+  - Welcome To The World Of Lee
 
 ## 可能已经迷失的伙伴
 
