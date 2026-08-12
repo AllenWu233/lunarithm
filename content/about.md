@@ -63,4 +63,4 @@ class Me:
 - 2024/05/xx - 2025/04/07，因 Netlify 出了点问题，SSL 证书过期，博客暂挂
 - 2025/04/08，更新主题为 [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod)，站名改为“逍遥乡 | Allen's World”，修复 SSL 证书问题，博客恢复正常访问
 - 2025/12/06，站名改为“逍遥乡：Allen's World”
-- 2026/07/19，迁移到新域名：[lunarithm.space](lunarithm.space)，站名改为“冰轮韵”，更新主题为：[risotto tokyo-night-dark](https://github.com/joeroe/risotto)
+- 2026/07/19，迁移到新域名：[lunarithm.space](lunarithm.space)，站名改为“冰轮韵”。更新主题为仿 Shell 风格的极简主题：[risotto tokyo-night-dark](https://github.com/joeroe/risotto)
