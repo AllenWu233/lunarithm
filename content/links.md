@@ -66,6 +66,7 @@ favicon: https://lunarithm.space/favicon-32x32.png
 title: Allen@冰轮韵
 description: 冰轮舞韵，代码凝魂。
 url: https://lunarithm.space
+avatar: https://lunarithm.space/avatar.jpg
 ```
 
 🍻欢迎友好交流！不要吝啬你的友链！
