@@ -22,7 +22,7 @@
 <p>发布日期：{{ .Date.Format "2006-01-02" }}</p>
 {{ end }}
 {{ if .Params.lastmod }}
-<p>最后更新于：{{ .Lastmod.Format "2006-01-02" }}</p>
+<p>最后更新：{{ .Lastmod.Format "2006-01-02" }}</p>
 {{ end }}
 {{ $showToc := true }}
 {{ if .Site.Params.default_toc }}
