@@ -188,7 +188,7 @@ MENU_ITEMS=(
 )
 
 items=""
-rofi_cmd=(rofi -dmenu -i -p " Selection")
+rofi_cmd=(rofi -dmenu -i -p "󰣐 Heart")
 
 # Build rofi menu text and keybindings
 for i in "${!MENU_ITEMS[@]}"; do

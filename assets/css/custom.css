@@ -48,20 +48,21 @@
 
 .friend-card {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
   background-color: var(--bg);
   border: 1px solid var(--inner-bg);
   border-radius: 0.25rem;
-  text-decoration: none;
-  color: var(--fg);
   transition: border-color 0.15s ease;
 }
 
 .friend-card:hover {
   border-color: var(--link);
+}
+
+.friend-card__body {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
   text-decoration: none;
   color: var(--fg);
 }
@@ -123,7 +124,7 @@
 /* floating panel */
 .friend-card__panel {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  bottom: calc(100% + 0.5rem);
   left: 0;
   z-index: 20;
   display: none;
@@ -139,6 +140,27 @@
 
 .friend-card:hover .friend-card__panel {
   display: block;
+}
+
+/* invisible bridge over the gap, keeps hover active on the way to the panel */
+.friend-card__panel::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+}
+
+/* allow text selection, prevent image/link drag */
+.friend-card img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.friend-card__panel {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .friend-card__panel-head {

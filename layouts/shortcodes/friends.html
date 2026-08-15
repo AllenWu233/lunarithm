@@ -9,33 +9,37 @@
       {{- $author := .author | default "" -}}
       {{- $mono := substr (or $author .title) 0 1 -}}
       {{- $avatar := .avatar -}}
+      {{- if $avatar -}}{{- $avatar = $avatar | relURL -}}{{- end -}}
       {{- $favicon := or .favicon $avatar -}}
-      <a class="friend-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-        {{- if $avatar -}}
-          <img class="friend-card__avatar" src="{{ $avatar }}" alt="{{ $author }}" loading="lazy" referrerpolicy="no-referrer" />
-        {{- else -}}
-          <span class="friend-card__avatar friend-card__icon--fallback">{{ $mono }}</span>
-        {{- end -}}
-        <span class="friend-card__meta">
-          <span class="friend-card__name">
-            <span class="friend-card__author">{{ $author }}</span>
-            {{- with .title -}}<span class="friend-card__title">{{ . }}</span>{{- end -}}
+      {{- if $favicon -}}{{- $favicon = $favicon | relURL -}}{{- end -}}
+      <div class="friend-card">
+        <a class="friend-card__body" href="{{ .url }}" target="_blank" rel="noopener noreferrer" draggable="false">
+          {{- if $avatar -}}
+            <img class="friend-card__avatar" src="{{ $avatar }}" alt="{{ $author }}" loading="lazy" referrerpolicy="no-referrer" draggable="false" />
+          {{- else -}}
+            <span class="friend-card__avatar friend-card__icon--fallback">{{ $mono }}</span>
+          {{- end -}}
+          <span class="friend-card__meta">
+            <span class="friend-card__name">
+              <span class="friend-card__author">{{ $author }}</span>
+              {{- with .title -}}<span class="friend-card__title">{{ . }}</span>{{- end -}}
+            </span>
+            {{- with .description -}}<span class="friend-card__desc">{{ . }}</span>{{- end -}}
           </span>
-          {{- with .description -}}<span class="friend-card__desc">{{ . }}</span>{{- end -}}
-        </span>
-        <span class="friend-card__panel">
+        </a>
+        <div class="friend-card__panel">
           <span class="friend-card__panel-head">
             {{- if $favicon -}}
-              <img class="friend-card__panel-icon" src="{{ $favicon }}" alt="" loading="lazy" referrerpolicy="no-referrer" />
+              <img class="friend-card__panel-icon" src="{{ $favicon }}" alt="" loading="lazy" referrerpolicy="no-referrer" draggable="false" />
             {{- else -}}
               <span class="friend-card__panel-icon friend-card__panel-icon--fallback">{{ $mono }}</span>
             {{- end -}}
-            <span class="friend-card__panel-url">{{ .url }}</span>
+            <a class="friend-card__panel-url" href="{{ .url }}" target="_blank" rel="noopener noreferrer" draggable="false">{{ .url }}</a>
           </span>
           {{- with .description -}}<span class="friend-card__panel-desc">{{ . }}</span>{{- end -}}
           {{- with .comment -}}<span class="friend-card__comment"> {{ . }}</span>{{- end -}}
-        </span>
-      </a>
+        </div>
+      </div>
     {{- end -}}
   </div>
 {{- else -}}
