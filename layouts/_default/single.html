@@ -15,11 +15,14 @@
 {{ if .Params.description }}
 <p>{{ .Params.description }}</p>
 {{ end }}
-{{ if or (.Params.author) (.Params.date) }}
-<p>
-    {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
-    {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
-</p>
+{{ if .Params.author }}
+<p>作者：{{ .Params.author }}</p>
+{{ end }}
+{{ if .Date }}
+<p>发布日期：{{ .Date.Format "2006-01-02" }}</p>
+{{ end }}
+{{ if .Params.lastmod }}
+<p>最后更新于：{{ .Lastmod.Format "2006-01-02" }}</p>
 {{ end }}
 {{ $showToc := true }}
 {{ if .Site.Params.default_toc }}
