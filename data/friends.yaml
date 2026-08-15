@@ -5,6 +5,7 @@
 #   description One-line description (optional)
 #   avatar      Avatar image URL (optional)
 #   favicon     Site icon URL (optional, fallback for avatar)
+#   comment     Owner's remark (optional)
 
 - author: "清絮"
   title: "清絮的博客"
@@ -12,13 +13,15 @@
   description: "人生如逆旅，我亦是行人"
   avatar: "https://blog.linioi.com/hotlink-ok/images/avatar.jpg"
   favicon: ""
+  comment: "入坑 Arch 和博客的引路人！行文流畅，诙谐有趣。"
 
 - author: "lilydjwg 依云"
   title: ""
   url: "https://blog.lilydjwg.me/"
-  description: "【Allen 评：百合仙子，Arch Linux CN 社区管理者之一】"
+  description: ""
   avatar: "https://blog.lilydjwg.me/user_files/lilydjwg/config/avatar.png"
   favicon: ""
+  comment: "百合仙子，Arch Linux CN 社区管理者之一。"
 
 - author: "Yunyi's Blog"
   title: "Yunyi's Blog"
@@ -26,13 +29,15 @@
   description: "得闲饮茶～～～"
   avatar: "https://www.yunyitang.me/img/Avatar.png"
   favicon: "https://www.yunyitang.me/img/favicon.png"
+  comment: ""
 
 - author: "阮一峰"
   title: ""
   url: "https://www.ruanyifeng.com/"
-  description: "【Allen 评：坚持更新网络日志，将博客精神体现得淋漓尽致】"
+  description: ""
   avatar: "https://www.ruanyifeng.com/blog/images/person_shot.jpg"
   favicon: ""
+  comment: "坚持更新网络日志，将博客精神体现得淋漓尽致。"
 
 - author: "彼岸花开"
   title: ""
@@ -40,6 +45,7 @@
   description: "欢迎！高洁而真诚的灵魂"
   avatar: "https://pxyfcywl.netlify.app/img/th.png"
   favicon: ""
+  comment: "老同学，ACM集训队成员之一（虽然不是同一小队）。"
 
 - author: "帅秃顶"
   title: ""
@@ -47,6 +53,7 @@
   description: "帅秃顶的博客"
   avatar: "https://145914.xyz/wp-content/uploads/2025/04/cropped-%E5%A4%9A%E5%95%A6a%E6%A2%A6-1-192x192.jpg"
   favicon: ""
+  comment: "同为Arch Linuxer。"
 
 - author: "Soulter's Blog"
   title: ""
@@ -54,6 +61,7 @@
   description: "Developer & ACG & ..."
   avatar: "https://avatars.githubusercontent.com/u/37870767?v=4"
   favicon: ""
+  comment: ""
 
 - author: "Mark 的自留地"
   title: ""
@@ -61,6 +69,7 @@
   description: "慢慢更新，慢慢打磨，认真分享，认真生活！"
   avatar: "https://markxu.icu/images/IMG_1766.JPG"
   favicon: ""
+  comment: ""
 
 - author: "纸鹿本鹿"
   title: ""
@@ -68,6 +77,7 @@
   description: "纸鹿至麓不知路，支炉制露不止漉"
   avatar: "https://www.zhilu.site/api/avatar.png"
   favicon: ""
+  comment: ""
 
 - author: "里世界"
   title: ""
@@ -75,3 +85,4 @@
   description: "Welcome To The World Of Lee"
   avatar: "https://leenet.xyz/avatar.png"
   favicon: ""
+  comment: ""

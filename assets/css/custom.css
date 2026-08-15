@@ -172,9 +172,18 @@
 }
 
 .friend-card__panel-desc {
+  display: block;
   margin-top: 0.25rem;
   font-size: 0.85rem;
   color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+.friend-card__comment {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--off-fg);
   overflow-wrap: anywhere;
 }
 

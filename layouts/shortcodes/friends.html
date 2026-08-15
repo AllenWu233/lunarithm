@@ -33,6 +33,7 @@
             <span class="friend-card__panel-url">{{ .url }}</span>
           </span>
           {{- with .description -}}<span class="friend-card__panel-desc">{{ . }}</span>{{- end -}}
+          {{- with .comment -}}<span class="friend-card__comment"> {{ . }}</span>{{- end -}}
         </span>
       </a>
     {{- end -}}
