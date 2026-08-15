@@ -1,0 +1,6 @@
+{{- $items := hugo.Data.lost_friends -}}
+{{- with $items -}}
+{{- partial "friend-cards.html" . -}}
+{{- else -}}
+<p>小伙伴们一个都没走丢~</p>
+{{- end -}}

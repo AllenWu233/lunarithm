@@ -16,6 +16,8 @@ lastmod: "2026-08-15"
 
 > 如果你的友链被错误地移到了这里，或信息需要更新，请在评论区留言。
 
+{{< lost-friends >}}
+
 ## 加入的组织
 
 - [萌国ICP备案](https://icp.gov.moe/AboutMoeICP.html)

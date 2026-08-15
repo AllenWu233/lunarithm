@@ -1,0 +1,8 @@
+# Each entry corresponds to a lost friend card. Field descriptions:
+#   author      Author name (required)
+#   title       Site name (optional)
+#   url         Site URL (required)
+#   description One-line description (optional)
+#   avatar      Avatar image URL (optional)
+#   favicon     Site icon URL (optional, fallback for avatar)
+#   comment     Owner's remark (optional)
