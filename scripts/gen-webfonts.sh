@@ -17,10 +17,20 @@ mkdir -p "$FONT_DIR"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-# Fetch fonttools (pure-python wheel) for subsetting
-URL="$(curl -s https://pypi.org/pypi/fonttools/json | python3 -c "import json,sys;d=json.load(sys.stdin);print([u['url'] for u in d['urls'] if u['filename'].endswith('py3-none-any.whl')][0])")"
-curl -sL -o "$TMP/ft.whl" "$URL"
-unzip -q "$TMP/ft.whl" -d "$TMP/ft"
+# Use system fontTools if available; otherwise fetch the wheel (self-contained fallback)
+if python3 -c "import fontTools" 2>/dev/null; then
+    echo "using system fontTools"
+else
+    echo "fontTools not found, downloading wheel..."
+    PYPI="${PYPI_MIRROR:-https://pypi.tuna.tsinghua.edu.cn}"
+    URL="$(curl -fsSL --max-time 30 "$PYPI/pypi/fonttools/json" \
+        | python3 -c "import json,sys;d=json.load(sys.stdin);print([u['url'] for u in d['urls'] if u['filename'].endswith('py3-none-any.whl')][0])" \
+        || true)"
+    [ -n "$URL" ] || { echo "ERROR: failed to fetch fonttools wheel URL from $PYPI (check network or PYPI_MIRROR)" >&2; exit 1; }
+    URL="${URL/https:\/\/files.pythonhosted.org/$PYPI}"
+    curl -fsSL --max-time 120 -o "$TMP/ft.whl" "$URL"
+    unzip -q "$TMP/ft.whl" -d "$TMP/ft"
+fi
 
 # Collect chars used across the site (content, data, layouts, config): non-ASCII, excluding Nerd Font PUA icons
 python3 - "$TMP/used.txt" <<'PY'
