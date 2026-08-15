@@ -1,0 +1,37 @@
+{{- /* 友链卡片短代码。用法：在任意内容页（如 links.md）中写： {{< friends >}}
+数据来自 data/friends.yaml，每条友链渲染成一张卡片： 头像 + 网站名 +
+简介，整卡可点击跳转。 */ -}} {{- $friends := hugo.Data.friends -}} {{- with
+$friends -}}
+<div class="friend-links">
+  {{- range . -}} {{- $avatar := or .avatar .favicon -}}
+  <a
+    class="friend-card"
+    href="{{ .url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {{- if $avatar -}}
+    <img
+      class="friend-card__avatar"
+      src="{{ $avatar }}"
+      alt="{{ .name }}"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    />
+    {{- else -}}
+    <span class="friend-card__avatar friend-card__avatar--fallback"
+      >{{ substr .name 0 1 }}</span
+    >
+    {{- end -}}
+    <span class="friend-card__meta">
+      <span class="friend-card__name">{{ .name }}</span>
+      {{- with .description -}}
+      <span class="friend-card__desc">{{ . }}</span>
+      {{- end -}}
+    </span>
+  </a>
+  {{- end -}}
+</div>
+{{- else -}}
+<p>暂无友链，快去 <code>data/friends.yaml</code> 里添加吧。</p>
+{{- end -}}

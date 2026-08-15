@@ -1,0 +1,70 @@
+# Friend link data
+# Each entry corresponds to a friend card. Field descriptions:
+#   name        Site name (required)
+#   url         Site URL (required)
+#   description One-line description (optional)
+#   avatar      Avatar image URL (optional)
+#   favicon     Site icon URL (optional, fallback for avatar)
+#
+# If both avatar and favicon are empty, a placeholder avatar will be generated from the first character of name.
+# To add a new link: copy a `- name: ...` block to the end.
+
+- name: "清絮"
+  url: "https://blog.linioi.com"
+  description: "人生如逆旅，我亦是行人"
+  avatar: ""
+  favicon: ""
+
+- name: "lilydjwg 依云"
+  url: "https://blog.lilydjwg.me/"
+  description: "百合仙子，Arch Linux CN 社区管理者之一"
+  avatar: ""
+  favicon: ""
+
+- name: "Yunyi's Blog"
+  url: "https://www.yunyitang.me/"
+  description: "得闲饮茶～～～"
+  avatar: ""
+  favicon: ""
+
+- name: "阮一峰"
+  url: "https://www.ruanyifeng.com/"
+  description: "坚持更新网络日志，将博客精神体现得淋漓尽致"
+  avatar: ""
+  favicon: ""
+
+- name: "彼岸花开"
+  url: "https://pxyfcywl.netlify.app"
+  description: "欢迎！高洁而真诚的灵魂"
+  avatar: ""
+  favicon: ""
+
+- name: "帅秃顶"
+  url: "https://145914.xyz/"
+  description: "帅秃顶的博客"
+  avatar: ""
+  favicon: ""
+
+- name: "Soulter's Blog"
+  url: "https://blog.soulter.top"
+  description: "Developer & ACG & ..."
+  avatar: ""
+  favicon: ""
+
+- name: "Mark 的自留地"
+  url: "https://markxu.icu"
+  description: "慢慢更新，慢慢打磨，认真分享，认真生活！"
+  avatar: ""
+  favicon: ""
+
+- name: "纸鹿本鹿"
+  url: "https://blog.zhilu.site/"
+  description: "纸鹿至麓不知路，支炉制露不止漉"
+  avatar: "https://www.zhilu.site/api/avatar.png"
+  favicon: ""
+
+- name: "里世界"
+  url: "https://leenet.xyz"
+  description: "Welcome To The World Of Lee"
+  avatar: "https://leenet.xyz/avatar.png"
+  favicon: ""

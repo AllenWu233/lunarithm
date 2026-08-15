@@ -9,26 +9,7 @@ lastmod: "2026-07-27"
 
 ## 友链
 
-- [清絮](https://blog.linioi.com)
-  - 人生如逆旅，我亦是行人
-- [lilydjwg 依云](https://blog.lilydjwg.me/)
-  - 【Allen 评：百合仙子，Arch Linux CN 社区管理者之一】
-- [Yunyi's Blog](https://www.yunyitang.me/)
-  - 得闲饮茶～～～
-- [阮一峰](https://www.ruanyifeng.com/)
-  - 【Allen 评：坚持更新网络日志，将博客精神体现得淋漓尽致】
-- [彼岸花开](https://pxyfcywl.netlify.app)
-  - 欢迎！高洁而真诚的灵魂
-- [帅秃顶](https://145914.xyz/)
-  - 帅秃顶的博客
-- [Soulter’s Blog](https://blog.soulter.top)
-  - Developer & ACG & ...
-- [Mark 的自留地](https://markxu.icu)
-  - 慢慢更新，慢慢打磨，认真分享，认真生活！
-- [纸鹿本鹿](https://blog.zhilu.site/)
-  - 纸鹿至麓不知路，支炉制露不止漉
-- [里世界](https://leenet.xyz)
-  - Welcome To The World Of Lee
+{{< friends >}}
 
 ## 可能已经迷失的伙伴
 
