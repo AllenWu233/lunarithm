@@ -28,11 +28,11 @@ lastmod: "2026-07-27"
 
 ```yaml
 author: # 你的名字
-title: # 站点名
-description: # 一句话个人或站点简介
-url: # 个人网站地址
+title: # 站点名（可选）
+description: # 个人或站点简介
+url: # 个人站点地址
 avatar: # 头像链接（可选）
-favicon: # 网站图标链接（可选）
+favicon: # 站点图标链接（可选）
 ```
 
 本站信息，请随意添加：
