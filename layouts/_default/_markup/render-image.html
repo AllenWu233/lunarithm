@@ -1,18 +1,11 @@
-{{- $isServer := hugo.IsServer -}} {{- $cdnBase :=
-"https://cdn.jsdelivr.net/gh/AllenWu233/lunarithm@main/static/images/" -}} {{-
-$localBase := "/images/" -}} {{- $imgBase := cond $isServer $localBase $cdnBase
--}} {{- $cleanDest := strings.TrimPrefix "/" .Destination -}}
-
-<img
-  src="{{ $imgBase }}{{ $cleanDest }}"
-  alt="{{ .Text }}"
-  {{
-  with
-  .Title
-  }}
-  title="{{ . }}"
-  {{
-  end
-  }}
-  loading="lazy"
-/>
+{{- $isServer := hugo.IsServer -}}
+{{- $cdnBase := "https://cdn.jsdelivr.net/gh/AllenWu233/lunarithm@main/static/images/" -}}
+{{- $localBase := "/images/" -}}
+{{- $imgBase := cond $isServer $localBase $cdnBase -}}
+{{- $cleanDest := strings.TrimPrefix "/" .Destination -}}
+<img src="{{ $imgBase }}{{ $cleanDest }}"
+     alt="{{ .Text }}"
+     {{ with .Title }}
+     title="{{ . }}"
+     {{ end }}
+     loading="lazy" />

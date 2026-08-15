@@ -1,22 +1,36 @@
 {{ define "main" }}
 <header class="content__header">
-  <h1>{{ .Title | markdownify }}</h1>
+    <h1>{{ .Title | markdownify }}</h1>
 </header>
 <div class="content__body">{{ .Content }}</div>
 <footer class="content__footer">
-  <!-- Load KaTeX assets conditionally -->
-  {{ if or .Params.math .Site.Params.math }} {{ partial "math.html" . }} {{ end
-  }} {{ partial "giscus.html" . }}
+    <!-- Load KaTeX assets conditionally -->
+    {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+    {{ end }}
+    {{ partial "giscus.html" . }}
 </footer>
-{{ end }} {{ define "aside" }} {{ if .Params.description }}
+{{ end }}
+{{ define "aside" }}
+{{ if .Params.description }}
 <p>{{ .Params.description }}</p>
-{{ end }} {{ if or (.Params.author) (.Params.date) }}
+{{ end }}
+{{ if or (.Params.author) (.Params.date) }}
 <p>
-  {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end
-  }} {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
+    {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
+    {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
 </p>
-{{ end }} {{ $showToc := true }} {{ if .Site.Params.default_toc }} {{ $showToc =
-.Site.Params.default_toc }} {{ end }} {{ if .Params.toc }} {{ $showToc =
-.Params.toc }} {{ end }} {{ if and $showToc (.TableOfContents) }}
+{{ end }}
+{{ $showToc := true }}
+{{ if .Site.Params.default_toc }}
+{{ $showToc = .Site.Params.default_toc }}
+{{ end }}
+{{ if .Params.toc }}
+{{ $showToc = .Params.toc }}
+{{ end }}
+{{ if and $showToc (.TableOfContents) }}
 <hr />
-目录： {{ .TableOfContents }} {{ end }} {{ end }}
+目录：
+{{ .TableOfContents }}
+{{ end }}
+{{ end }}
