@@ -1,0 +1,10 @@
+{{- /*
+  Organization cards. Usage: {{< organizations >}}.
+  Reads data/organizations.yaml.
+*/ -}}
+{{- $items := hugo.Data.organizations -}}
+{{- with $items -}}
+  {{- partial "friend-cards.html" . -}}
+{{- else -}}
+  <p>暂无加入的组织。</p>
+{{- end -}}

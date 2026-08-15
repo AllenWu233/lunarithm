@@ -20,8 +20,7 @@ lastmod: "2026-08-15"
 
 ## 加入的组织
 
-- [萌国ICP备案](https://icp.gov.moe/AboutMoeICP.html)
-- [博友圈](https://www.boyouquan.com/home)
+{{< organizations >}}
 
 ## 又一条新航线
 

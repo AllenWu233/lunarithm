@@ -1,0 +1,21 @@
+# Each entry corresponds to an organization card. Field descriptions:
+#   author      Organization name (required)
+#   title       Alternate name (optional)
+#   url         Site URL (required)
+#   description One-line description (optional)
+#   avatar      Avatar image URL (optional)
+#   favicon     Site icon URL (optional, fallback for avatar)
+#   comment     Owner's remark (optional)
+- author: "萌国ICP备案"
+  url: "https://icp.gov.moe/AboutMoeICP.html"
+  description: "纯属萌友网站联萌！"
+  avatar: ""
+  favicon: ""
+  comment: "可以为站点选一些有意思的编号~"
+
+- author: "博友圈"
+  url: "https://www.boyouquan.com/home"
+  description: "博友圈是博客人的专属朋友圈！我们深信每个博客背后都是一个独特的灵魂，让我们跨越山海彼此相连，一起用文字打败时间！"
+  avatar: ""
+  favicon: ""
+  comment: "博客聚合网站，有点像[十年之约](https://www.foreverblog.cn/)"
