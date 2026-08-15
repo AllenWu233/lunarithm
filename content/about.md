@@ -21,7 +21,7 @@ from base64 import b64decode
 
 class Me:
     def __init__(self):
-        self.name = "Allen"
+        self.name = "Allen Wu"
         self.hobbies = ["jogging", "harmonica", "reading", "programming"]
         self.fav_OS = ["Arch Linux", "LineageOS"]
         self.fav_programming_languages = ["Python", "Rust"]
