@@ -1,69 +1,76 @@
-# Friend link data
 # Each entry corresponds to a friend card. Field descriptions:
-#   name        Site name (required)
+#   author      Author name (required)
+#   title       Site name (optional)
 #   url         Site URL (required)
 #   description One-line description (optional)
 #   avatar      Avatar image URL (optional)
 #   favicon     Site icon URL (optional, fallback for avatar)
-#
-# If both avatar and favicon are empty, a placeholder avatar will be generated from the first character of name.
-# To add a new link: copy a `- name: ...` block to the end.
 
-- name: "清絮"
+- author: "清絮"
+  title: "清絮的博客"
   url: "https://blog.linioi.com"
   description: "人生如逆旅，我亦是行人"
   avatar: "https://blog.linioi.com/hotlink-ok/images/avatar.jpg"
   favicon: ""
 
-- name: "lilydjwg 依云"
+- author: "lilydjwg 依云"
+  title: ""
   url: "https://blog.lilydjwg.me/"
   description: "【Allen 评：百合仙子，Arch Linux CN 社区管理者之一】"
   avatar: "https://blog.lilydjwg.me/user_files/lilydjwg/config/avatar.png"
   favicon: ""
 
-- name: "Yunyi's Blog"
+- author: "Yunyi's Blog"
+  title: "Yunyi's Blog"
   url: "https://www.yunyitang.me/"
   description: "得闲饮茶～～～"
   avatar: "https://www.yunyitang.me/img/Avatar.png"
   favicon: "https://www.yunyitang.me/img/favicon.png"
 
-- name: "阮一峰"
+- author: "阮一峰"
+  title: ""
   url: "https://www.ruanyifeng.com/"
   description: "【Allen 评：坚持更新网络日志，将博客精神体现得淋漓尽致】"
   avatar: "https://www.ruanyifeng.com/blog/images/person_shot.jpg"
   favicon: ""
 
-- name: "彼岸花开"
+- author: "彼岸花开"
+  title: ""
   url: "https://pxyfcywl.netlify.app"
   description: "欢迎！高洁而真诚的灵魂"
   avatar: "https://pxyfcywl.netlify.app/img/th.png"
   favicon: ""
 
-- name: "帅秃顶"
+- author: "帅秃顶"
+  title: ""
   url: "https://145914.xyz/"
   description: "帅秃顶的博客"
   avatar: "https://145914.xyz/wp-content/uploads/2025/04/cropped-%E5%A4%9A%E5%95%A6a%E6%A2%A6-1-192x192.jpg"
   favicon: ""
 
-- name: "Soulter's Blog"
+- author: "Soulter's Blog"
+  title: ""
   url: "https://blog.soulter.top"
   description: "Developer & ACG & ..."
   avatar: "https://avatars.githubusercontent.com/u/37870767?v=4"
   favicon: ""
 
-- name: "Mark 的自留地"
+- author: "Mark 的自留地"
+  title: ""
   url: "https://markxu.icu"
   description: "慢慢更新，慢慢打磨，认真分享，认真生活！"
   avatar: "https://markxu.icu/images/IMG_1766.JPG"
   favicon: ""
 
-- name: "纸鹿本鹿"
+- author: "纸鹿本鹿"
+  title: ""
   url: "https://blog.zhilu.site/"
   description: "纸鹿至麓不知路，支炉制露不止漉"
   avatar: "https://www.zhilu.site/api/avatar.png"
   favicon: ""
 
-- name: "里世界"
+- author: "里世界"
+  title: ""
   url: "https://leenet.xyz"
   description: "Welcome To The World Of Lee"
   avatar: "https://leenet.xyz/avatar.png"

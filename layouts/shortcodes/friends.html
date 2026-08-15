@@ -1,37 +1,42 @@
 {{- /*
-      Friend link card shortcode. Usage: in any content page (e.g., links.md), write:
-
-          {{< friends >}}
-
-      Data is read from data/friends.yaml. Each link renders as a card with avatar, site name, and description. The whole card is clickable.
-    */ -}}
+  Friend link cards. Usage: {{< friends >}}.
+  Reads data/friends.yaml.
+*/ -}}
 {{- $friends := hugo.Data.friends -}}
 {{- with $friends -}}
-<div class="friend-links">
+  <div class="friend-links">
     {{- range . -}}
-    {{- $avatar := or .avatar .favicon -}}
-    <a class="friend-card"
-       href="{{ .url }}"
-       target="_blank"
-       rel="noopener noreferrer">
+      {{- $author := .author | default "" -}}
+      {{- $mono := substr (or $author .title) 0 1 -}}
+      {{- $avatar := .avatar -}}
+      {{- $favicon := or .favicon $avatar -}}
+      <a class="friend-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
         {{- if $avatar -}}
-        <img class="friend-card__avatar"
-             src="{{ $avatar }}"
-             alt="{{ .name }}"
-             loading="lazy"
-             referrerpolicy="no-referrer" />
+          <img class="friend-card__avatar" src="{{ $avatar }}" alt="{{ $author }}" loading="lazy" referrerpolicy="no-referrer" />
         {{- else -}}
-        <span class="friend-card__avatar friend-card__avatar--fallback">{{ substr .name 0 1 }}</span>
+          <span class="friend-card__avatar friend-card__icon--fallback">{{ $mono }}</span>
         {{- end -}}
         <span class="friend-card__meta">
-            <span class="friend-card__name">{{ .name }}</span>
-            {{- with .description -}}
-            <span class="friend-card__desc">{{ . }}</span>
-            {{- end -}}
+          <span class="friend-card__name">
+            <span class="friend-card__author">{{ $author }}</span>
+            {{- with .title -}}<span class="friend-card__title">{{ . }}</span>{{- end -}}
+          </span>
+          {{- with .description -}}<span class="friend-card__desc">{{ . }}</span>{{- end -}}
         </span>
-    </a>
+        <span class="friend-card__panel">
+          <span class="friend-card__panel-head">
+            {{- if $favicon -}}
+              <img class="friend-card__panel-icon" src="{{ $favicon }}" alt="" loading="lazy" referrerpolicy="no-referrer" />
+            {{- else -}}
+              <span class="friend-card__panel-icon friend-card__panel-icon--fallback">{{ $mono }}</span>
+            {{- end -}}
+            <span class="friend-card__panel-url">{{ .url }}</span>
+          </span>
+          {{- with .description -}}<span class="friend-card__panel-desc">{{ . }}</span>{{- end -}}
+        </span>
+      </a>
     {{- end -}}
-</div>
+  </div>
 {{- else -}}
-<p>暂无友链，快去 <code>data/friends.yaml</code> 里添加吧。</p>
+  <p>No friend links yet. Add entries to data/friends.yaml.</p>
 {{- end -}}

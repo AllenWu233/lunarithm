@@ -27,8 +27,8 @@ lastmod: "2026-07-27"
 欢迎在评论区留下你的个人站点链接，可参考以下格式：
 
 ```yaml
-title: # 站点名
 author: # 你的名字
+title: # 站点名
 description: # 一句话个人或站点简介
 url: # 个人网站地址
 avatar: # 头像链接（可选）
@@ -38,8 +38,8 @@ favicon: # 网站图标链接（可选）
 本站信息，请随意添加：
 
 ```yaml
-title: 冰轮韵
 author: Allen
+title: 冰轮韵
 description: 冰轮舞韵，代码凝魂。
 url: https://lunarithm.space
 avatar: https://lunarithm.space/avatar.jpg

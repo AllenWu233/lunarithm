@@ -1,75 +1,146 @@
-/* 友链卡片 */
+/* Friend link cards */
 .friend-links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 0 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.5rem 0;
 }
 
 .friend-card {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background-color: var(--bg);
-    border: 1px solid var(--inner-bg);
-    border-radius: 0.25rem;
-    text-decoration: none;
-    color: var(--fg);
-    transition: border-color 0.15s ease, background-color 0.15s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--bg);
+  border: 1px solid var(--inner-bg);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.15s ease;
 }
 
 .friend-card:hover {
-    border-color: var(--link);
-    background-color: var(--inner-bg);
-    text-decoration: none;
-    color: var(--fg);
+  border-color: var(--link);
+  text-decoration: none;
+  color: var(--fg);
 }
 
+/* avatar */
 .friend-card__avatar {
-    flex: none;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    object-fit: cover;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.friend-card__avatar--fallback {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--bg);
-    background-color: var(--link);
+.friend-card__icon--fallback {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bg);
+  background-color: var(--link);
 }
 
+/* text */
 .friend-card__meta {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  line-height: 1.4;
 }
 
 .friend-card__name {
-    font-weight: 600;
-    color: var(--fg);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-card__author {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.friend-card__title {
+  margin-left: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--off-fg);
 }
 
 .friend-card__desc {
-    font-size: 0.85rem;
-    color: var(--off-fg);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--off-fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-/* 窄屏（页面切换为单栏）时降为每行一张卡片 */
+/* floating panel */
+.friend-card__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  display: none;
+  width: max-content;
+  max-width: min(20rem, calc(100vw - 2rem));
+  padding: 0.75rem;
+  background-color: var(--inner-bg);
+  border: 1px solid var(--muted);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.friend-card:hover .friend-card__panel {
+  display: block;
+}
+
+.friend-card__panel-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.friend-card__panel-icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.125rem;
+  object-fit: cover;
+}
+
+.friend-card__panel-icon--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--bg);
+  background-color: var(--link);
+}
+
+.friend-card__panel-url {
+  font-size: 0.85rem;
+  color: var(--link);
+  overflow-wrap: anywhere;
+}
+
+.friend-card__panel-desc {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+/* single column on narrow screens */
 @media (max-width: 45rem) {
-    .friend-links {
-        grid-template-columns: minmax(0, 1fr);
-    }
+  .friend-links {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
