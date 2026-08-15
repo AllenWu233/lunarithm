@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Regenerate site webfonts:
 #   - Fira Mono (Regular/Bold) -> woff2
-#   - LXGW WenKai Mono GB Screen -> subset to characters used in content/ -> woff2
+#   - LXGW WenKai Mono GB Screen -> subset to characters used across the site -> woff2
 # Requires: network (downloads fonttools wheel), woff2_compress, system fonts.
 set -euo pipefail
 
@@ -22,11 +22,15 @@ URL="$(curl -s https://pypi.org/pypi/fonttools/json | python3 -c "import json,sy
 curl -sL -o "$TMP/ft.whl" "$URL"
 unzip -q "$TMP/ft.whl" -d "$TMP/ft"
 
-# Collect chars used in content: non-ASCII, excluding Nerd Font PUA icons
+# Collect chars used across the site (content, data, layouts, config): non-ASCII, excluding Nerd Font PUA icons
 python3 - "$TMP/used.txt" <<'PY'
-import glob, sys
+import glob, os, sys
+patterns = ['content/**/*', 'data/**/*', 'layouts/**/*', 'hugo.toml']
+files = []
+for pat in patterns:
+    files += [p for p in glob.glob(pat, recursive=True) if os.path.isfile(p)]
 chars = set()
-for f in glob.glob('content/**/*.md', recursive=True):
+for f in files:
     for ch in open(f, encoding='utf-8').read():
         cp = ord(ch)
         if cp < 0x80:
@@ -36,7 +40,7 @@ for f in glob.glob('content/**/*.md', recursive=True):
         chars.add(ch)
 with open(sys.argv[1], 'w', encoding='utf-8') as f:
     f.write(''.join(sorted(chars)))
-print(f'{len(chars)} unique chars collected')
+print(f'{len(chars)} unique chars collected from {len(files)} files')
 PY
 
 # Subset LXGW to used chars + CJK punctuation/kana/fullwidth blocks
