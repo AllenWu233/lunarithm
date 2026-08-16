@@ -1,10 +1,8 @@
-{{- $isServer := hugo.IsServer -}}
-{{- $cdnBase := "https://cdn.jsdelivr.net/gh/AllenWu233/lunarithm@main/static/images/" -}}
-{{- $localBase := "/images/" -}}
-{{- $imgBase := cond $isServer $localBase $cdnBase -}}
-{{- $cleanDest := strings.TrimPrefix "/" .Destination -}}
+{{- /* Render a markdown image. Remote URLs pass through; local images go through the CDN helper. */ -}}
+{{- $dst := .Destination -}}
+{{- if or (strings.HasPrefix $dst "http://") (strings.HasPrefix $dst "https://") -}}
 <figure class="image-figure">
-<img src="{{ $imgBase }}{{ $cleanDest }}"
+<img src="{{ $dst }}"
      alt="{{ .Text }}"
      {{ with .Title }}
      title="{{ . }}"
@@ -14,3 +12,18 @@
 <figcaption class="image-caption">{{ . }}</figcaption>
 {{- end }}
 </figure>
+{{- else -}}
+{{- $clean := strings.TrimPrefix "/" $dst -}}
+{{- $clean = strings.TrimPrefix "images/" $clean -}}
+<figure class="image-figure">
+<img src="{{ partial "img-src.html" (printf "images/%s" $clean) }}"
+     alt="{{ .Text }}"
+     {{ with .Title }}
+     title="{{ . }}"
+     {{ end }}
+     loading="lazy" />
+{{- with .Text }}
+<figcaption class="image-caption">{{ . }}</figcaption>
+{{- end }}
+</figure>
+{{- end -}}

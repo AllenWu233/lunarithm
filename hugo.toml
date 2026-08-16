@@ -159,3 +159,20 @@ disableInlineCSS = true
 
 [services.x]
 disableInlineCSS = true
+
+# Cache static assets in `hugo server` so refreshes don't re-download fonts/images.
+[server]
+[[server.headers]]
+for = "/fonts/**"
+[server.headers.values]
+Cache-Control = "max-age=604800"
+
+[[server.headers]]
+for = "/images/**"
+[server.headers.values]
+Cache-Control = "max-age=604800"
+
+[[server.headers]]
+for = "/avatar.jpg"
+[server.headers.values]
+Cache-Control = "max-age=3600"

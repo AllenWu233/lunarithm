@@ -37,6 +37,4 @@ fn main() {
 
 灵感来自：[不仅仅是 Hello world](https://course.rs/first-try/hello-world.html)
 
-<div style="text-align: center;">
-  <img src="/images/world-hello.jpg" alt="Koishi" width="40%">
-</div>
+![](world-hello.jpg)

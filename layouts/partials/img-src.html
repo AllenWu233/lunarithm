@@ -1,0 +1,14 @@
+{{- /* Outputs the URL for a static asset: CDN in production, local in dev.
+     Remote URLs (http/https) pass through unchanged. */ -}}
+{{- $p := . -}}
+{{- if or (strings.HasPrefix $p "http://") (strings.HasPrefix $p "https://") -}}
+{{- $p -}}
+{{- else -}}
+{{- $cdnBase := "https://cdn.jsdelivr.net/gh/AllenWu233/lunarithm@main/static/" -}}
+{{- $clean := strings.TrimPrefix "/" $p -}}
+{{- if hugo.IsServer -}}
+{{- $clean | relURL -}}
+{{- else -}}
+{{- printf "%s%s" $cdnBase $clean -}}
+{{- end -}}
+{{- end -}}

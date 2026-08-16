@@ -5,9 +5,9 @@
       {{- $author := .author | default "" -}}
       {{- $mono := substr (or $author .title) 0 1 -}}
       {{- $avatar := .avatar -}}
-      {{- if $avatar -}}{{- $avatar = $avatar | relURL -}}{{- end -}}
+      {{- if $avatar -}}{{- $avatar = partial "img-src.html" $avatar -}}{{- end -}}
       {{- $favicon := or .favicon $avatar -}}
-      {{- if $favicon -}}{{- $favicon = $favicon | relURL -}}{{- end -}}
+      {{- if $favicon -}}{{- $favicon = partial "img-src.html" $favicon -}}{{- end -}}
       <div class="friend-card">
         <a class="friend-card__body" href="{{ .url }}" target="_blank" rel="noopener noreferrer" draggable="false">
           {{- if $avatar -}}
