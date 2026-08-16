@@ -1,0 +1,10 @@
+{{- if eq .Type "alert" -}}
+  {{- $color := index hugo.Data.admonitions .AlertType | default "#7C3AED" -}}
+  <blockquote class="admonition" style="--admonition-color: {{ $color }};">
+    <span class="admonition-title">{{ upper .AlertType }}</span>
+    {{- with .AlertTitle }}<span class="admonition-title-text">{{ . }}</span>{{ end }}
+    {{ .Text | safeHTML }}
+  </blockquote>
+{{- else -}}
+  <blockquote>{{ .Text | safeHTML }}</blockquote>
+{{- end -}}

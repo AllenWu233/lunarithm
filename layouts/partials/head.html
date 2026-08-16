@@ -26,7 +26,8 @@
 {{- $headings := resources.Get "css/headings.css" -}}
 {{- $images := resources.Get "css/images.css" -}}
 {{- $code := resources.Get "css/code-copy.css" -}}
-{{- $css := slice $fonts $cards $headings $images $code | resources.Concat "css/custom.css" | resources.Fingerprint -}}
+{{- $admonitions := resources.Get "css/admonitions.css" -}}
+{{- $css := slice $fonts $cards $headings $images $code $admonitions | resources.Concat "css/custom.css" | resources.Fingerprint -}}
 {{- with $css }}
 <link rel="stylesheet"
       href="{{ .RelPermalink }}"
