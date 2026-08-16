@@ -2,8 +2,8 @@
 <div class="content__body">{{ .Content }}</div>
 {{ $limit := .Site.Params.homePagePosts | default 10 }}
 <div class="posts-section">
-    <h2><a href="/categories/月魂/">月魂</a></h2>
     {{ $yuehun := where .Site.RegularPages "Params.categories" "in" "月魂" }}
+    <h2><a href="/categories/月魂/">月魂</a><span class="term-count">（{{ len $yuehun }}）</span></h2>
     <ul class="posts" style="margin-bottom: 0;">
         {{ range first $limit $yuehun }}
         <li style="margin-bottom: 4px;">
@@ -26,8 +26,8 @@
     </ul>
 </div>
 <div class="posts-section">
-    <h2><a href="/categories/月韵/">月韵</a></h2>
     {{ $yueyun := where .Site.RegularPages "Params.categories" "in" "月韵" }}
+    <h2><a href="/categories/月韵/">月韵</a><span class="term-count">（{{ len $yueyun }}）</span></h2>
     <ul class="posts" style="margin-bottom: 0;">
         {{ range first $limit $yueyun }}
         <li style="margin-bottom: 4px;">

@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">{{ .Title | markdownify }}</h1>
+
+    {{ .Content }}
+
+    <ul>
+    {{ range .Pages }}
+        {{ $count := len (where site.RegularPages "Params.categories" "in" .Title) }}
+        <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>{{ if gt $count 0 }}<span class="term-count">（{{ $count }}）</span>{{ end }}</li>
+    {{ end }}
+    </ul>
+
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}

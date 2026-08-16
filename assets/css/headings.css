@@ -37,3 +37,10 @@ h1.page__logo {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
+/* Article count next to category/section names */
+.term-count {
+  color: var(--muted);
+  font-size: 0.85em;
+  font-weight: 400;
+}

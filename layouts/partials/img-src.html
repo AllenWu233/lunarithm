@@ -1,5 +1,5 @@
 {{- /* Outputs the URL for a static asset: CDN in production, local in dev.
-     Remote URLs (http/https) pass through unchanged. */ -}}
+         Remote URLs (http/https) pass through unchanged. */ -}}
 {{- $p := . -}}
 {{- if or (strings.HasPrefix $p "http://") (strings.HasPrefix $p "https://") -}}
 {{- $p -}}
