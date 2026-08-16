@@ -22,4 +22,4 @@ git submodule update --init --recursive # needed when you reclone your repo (sub
 - [x] Different font size for `#` to `#####`
 - [x] Image description text
 - [ ] Todo style blocks, suck as `[!NOTE]`, `[!WARN]`
-- [ ] Show language name on code blocks
+- [x] Show language name on code blocks
