@@ -1,5 +1,7 @@
 {{ define "main" }}
-    {{ $count := len (where site.RegularPages "Params.categories" "in" .Title) }}
+    {{ $param := .Data.Plural | default "categories" }}
+    {{ $key := printf "Params.%s" $param }}
+    {{ $count := len (where site.RegularPages $key "in" .Title) }}
     <h1 id="{{ .Title | urlize }}">{{ .Title | markdownify }}{{ if gt $count 0 }}<span class="term-count">（{{ $count }}）</span>{{ end }}</h1>
 
     {{ .Content }}
@@ -19,7 +21,7 @@
             {{ end }}
         </li>
         {{ else }}
-        {{ $c := len (where site.RegularPages "Params.categories" "in" .Title) }}
+        {{ $c := len (where site.RegularPages $key "in" .Title) }}
         <li><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>{{ if gt $c 0 }}<span class="term-count">（{{ $c }}）</span>{{ end }}</li>
         {{ end }}
     {{ end }}
