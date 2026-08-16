@@ -20,5 +20,6 @@ git submodule update --init --recursive # needed when you reclone your repo (sub
 - [x] Show last edit date
 - [x] Card style friend links
 - [x] Different font size for `#` to `#####`
+- [x] Image description text
 - [ ] Todo style blocks, suck as `[!NOTE]`, `[!WARN]`
 - [ ] Show language name on code blocks

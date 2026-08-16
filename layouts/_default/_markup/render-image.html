@@ -3,9 +3,14 @@
 {{- $localBase := "/images/" -}}
 {{- $imgBase := cond $isServer $localBase $cdnBase -}}
 {{- $cleanDest := strings.TrimPrefix "/" .Destination -}}
+<figure class="image-figure">
 <img src="{{ $imgBase }}{{ $cleanDest }}"
      alt="{{ .Text }}"
      {{ with .Title }}
      title="{{ . }}"
      {{ end }}
      loading="lazy" />
+{{- with .Text }}
+<figcaption class="image-caption">{{ . }}</figcaption>
+{{- end }}
+</figure>
