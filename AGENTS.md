@@ -25,35 +25,43 @@ All customization lives in the project root (`layouts/`, `assets/`, `data/`, `st
 ## Conventions
 
 ### Code comments
+
 - Comments are in **English**, concise, no step numbering. (User-facing replies are in Chinese, but committed code comments are English.)
 
 ### Assets (CSS/JS)
+
 - Site CSS is split by feature in `assets/css/*.css`: `fonts`, `headings`, `friend-cards`, `images`, `code-copy`, `admonitions`.
 - `layouts/partials/head.html` bundles them: `resources.Get` each file → `resources.Concat "css/custom.css"` → `resources.Fingerprint`.
 - Add a new feature → add `assets/css/xxx.css` and register it in the `slice` in `head.html`.
 - JS lives in `assets/js/` and is loaded the same way (fingerprinted).
 
 ### Fonts (self-hosted)
+
 - `static/fonts/`: Fira Mono (Latin), LXGW WenKai Mono GB Screen (CJK), Nerd Font Symbols Mono (icons), all as `.woff2`.
 - The CJK font is **subset to characters actually used on the site**. Regenerate via `scripts/gen-webfonts.sh` whenever new Chinese/kanji/kana characters are added to `content/`, `data/`, `layouts/`, or `hugo.toml`.
 - Font faces declare `unicode-range` for on-demand loading; the stack is `--font-monospace` in `assets/css/fonts.css`.
 
 ### Images
+
 - Markdown images go through `layouts/_default/_markup/render-image.html`: wrapped in `<figure>` with `<figcaption>` from the alt text.
 - CDN routing is centralized in `layouts/partials/img-src.html`: production → jsDelivr (`https://cdn.jsdelivr.net/gh/AllenWu233/lunarithm@main/static/`), `hugo server` → local; remote `http(s)` URLs pass through unchanged.
 - Local images in Markdown use basenames (`![](foo.jpg)`); the render hook prepends `images/`.
 
 ### Data-driven cards
+
 Friend links / lost friends / organizations are data-driven and share one template:
+
 - `data/friends.yaml` → `{{< friends >}}`
 - `data/lost_friends.yaml` → `{{< lost-friends >}}`
 - `data/organizations.yaml` → `{{< organizations >}}`
 - shared markup: `layouts/partials/friend-cards.html`; field schema: `author` / `title` / `url` / `description` / `avatar` / `favicon` / `comment`.
 
 ### Admonitions / callouts
+
 `[!KEYWORD]` blockquotes are rendered by `layouts/_default/_markup/render-blockquote.html`, colored via `data/admonitions.yaml` (keys are lowercase; base types `fix`/`warn`/`note`/`todo`/`hack`/`perf`/`test` plus aliases).
 
 ### Taxonomy counts
+
 `layouts/_default/list.html` shows article counts (`（N）`) next to category/tag/series names, and renders post entries with title + date + description. The count is dynamic via `.Data.Plural`, and must use **both** `where` operators summed, because Hugo handles scalar vs slice front matter differently:
 
 ```go
@@ -64,6 +72,7 @@ Friend links / lost friends / organizations are data-driven and share one templa
 ```
 
 ### Front matter / taxonomy naming
+
 - `categories` (月魂 = tech, 月韵 = essay/life), `series`, `tags`.
 - Menu/section names: 月轨 (series), 月影 (categories), 月痕 (tags), 月渡 (links), 逍遥乡 (about).
 
@@ -71,7 +80,6 @@ Friend links / lost friends / organizations are data-driven and share one templa
 
 - `hugo server` does not cache static assets by default. `hugo.toml` `[server.headers]` sets `Cache-Control` for `/fonts/**`, `/images/**`, `/avatar.jpg` — keep this in place.
 - Nerd Font icons are PUA codepoints; they render via the `NerdFontIcons` face in `--font-monospace`.
-- The avatar is served from `static/avatar.jpg` (keep it small; it is displayed at 45px).
 
 ## Build / verify
 
@@ -86,4 +94,4 @@ hugo -D       # include drafts
 
 ## Commit style
 
-Recent commits use concise prefixes (`Add:`, `fix:`, `refactor:`). Keep it consistent.
+Recent commits use concise prefixes (`Add:`, `Fix:`, `Refactor:`). Keep it consistent.
