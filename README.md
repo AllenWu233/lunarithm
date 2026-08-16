@@ -15,6 +15,8 @@ git submodule update --init --recursive # needed when you reclone your repo (sub
 
 本站基于 [risotto](https://github.com/joeroe/risotto)（作为 git submodule 置于 `themes/risotto/`），**不直接改动主题源码**，而是利用 Hugo 的「项目覆盖主题」机制：在项目根目录放置与主题同路径的文件进行覆盖，或在 `data/`、`assets/`、`layouts/` 中新增内容。以下是相对 `themes/risotto/` 所做的全部修改与补丁，代码和本README都基于[Deepseek Harness](https://www.deepseek.com/harness)生成。
 
+> 声明：仅主题定制借助了AI，`posts/`里的文章如无备注皆为人工写作。
+
 ### layouts/（覆盖与新增模板）
 
 **覆盖主题原有模板：**
