@@ -1,0 +1,11 @@
+/* Image captions (render-image hook wraps markdown images in figure) */
+.image-figure {
+  margin: 0 0 1.5rem 0;
+}
+
+.image-caption {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--off-fg);
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------
+ * Markdown heading sizes (h1–h5)
+ * Patch layer: this file is loaded AFTER css/risotto.css (see
+ * layouts/partials/head.html), so these rules override the theme's
+ * uniform 1rem heading size without touching themes/risotto.
+ * ------------------------------------------------------------------ */
+h1 {
+  font-size: 1.35rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+h4 {
+  font-size: 1.05rem;
+}
+h5 {
+  font-size: 1rem;
+}
+
+/* The theme fixes line-height to 1.5rem on <body>; give headings a
+   proportional line-height so the larger sizes don't overlap. */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.45;
+}
+
+/* Keep the header prompt (h1.page__logo in layouts/partials/header.html)
+   at the small terminal size — it must not inherit the enlarged h1
+   heading size above. */
+h1.page__logo {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

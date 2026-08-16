@@ -21,7 +21,13 @@
 <link rel="stylesheet"
       href="{{ printf "css/palettes/%s.css" (.Site.Params.theme.palette | default "base16-dark") | relURL }}">
 <link rel="stylesheet" href="{{ "css/risotto.css" | relURL }}">
-{{- with resources.Get "css/custom.css" | resources.Fingerprint }}
+{{- $fonts := resources.Get "css/fonts.css" -}}
+{{- $cards := resources.Get "css/friend-cards.css" -}}
+{{- $headings := resources.Get "css/headings.css" -}}
+{{- $images := resources.Get "css/images.css" -}}
+{{- $code := resources.Get "css/code-copy.css" -}}
+{{- $css := slice $fonts $cards $headings $images $code | resources.Concat "css/custom.css" | resources.Fingerprint -}}
+{{- with $css }}
 <link rel="stylesheet"
       href="{{ .RelPermalink }}"
       integrity="{{ .Data.Integrity }}">
