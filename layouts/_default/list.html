@@ -8,7 +8,7 @@
     {{ range .Pages }}
         {{ if .IsPage }}
         <li style="margin-bottom: 4px;">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
             {{ with .Description }}
             <span class="post-description"
@@ -20,7 +20,7 @@
         </li>
         {{ else }}
         {{ $c := len (where site.RegularPages "Params.categories" "in" .Title) }}
-        <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>{{ if gt $c 0 }}<span class="term-count">（{{ $c }}）</span>{{ end }}</li>
+        <li><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>{{ if gt $c 0 }}<span class="term-count">（{{ $c }}）</span>{{ end }}</li>
         {{ end }}
     {{ end }}
     </ul>
