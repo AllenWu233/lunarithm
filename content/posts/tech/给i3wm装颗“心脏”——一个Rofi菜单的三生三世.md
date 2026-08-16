@@ -3,7 +3,7 @@ title = "给i3wm装颗“心脏”——一个Rofi菜单的三生三世"
 slug = "rofi-heart"
 description = "Arch Linux + i3wm 下的 Rofi 脚本选择器"
 date = "2026-08-06T22:55:44+08:00"
-lastmod = "2026-08-12T19:50:00+08:00"
+lastmod = "2026-08-16T10:08:00+08:00"
 tags = ["Arch Linux", "Rofi", "Shell", "Python", "Bash", "dmenu", "i3wm"]
 series = "教程"
 categories = "月魂"
@@ -17,7 +17,7 @@ categories = "月魂"
 
 不同于捆绑了工具栏、桌面小部件等一系列应用的 DE (桌面环境)，**WM (窗口管理器)** 只提供基础的窗口绘制功能，管理窗口的大小、位置、边框等。一些 WM 是 DE 的一部分，如 Windows 的 [dwm](https://learn.microsoft.com/en-us/windows/win32/dwm/dwm-overview)（不要与 Linux 上的 [dwm](https://wiki.archlinux.org/title/Dwm) 混淆）、KDE 的 [KWin](https://en.wikipedia.org/wiki/KWin)、Gnome 的 [Mutter](<https://en.wikipedia.org/wiki/Mutter_(window_manager)>) 等；而另一些 WM 被设计为独立使用，用户可根据喜好选择其他应用（如状态栏、壁纸管理器），组合成更轻量的专属桌面环境。
 
-WM 的窗口管理类型是其特色：
+窗口管理类型是 WM 的特色：
 
 - **堆叠（悬浮）**：就像 KDE、Windows 下的窗口管理，用鼠标调整窗口大小、拖拽位置，不同窗口能像桌上的纸张一样部分重叠放置。
 - **平铺**：窗口之间不重叠，大小、位置能被自动或手动调整，以占满整个屏幕——例如，只有一个窗口时，几乎全屏；有两个窗口时，左右各一半铺满屏幕。另外广泛地使用键绑定，可以完全不用鼠标来管理和定位窗口（Vimer 狂喜）。
@@ -378,4 +378,4 @@ bindsym $mod+o exec ~/.local/bin/rofi-heart
 3. [Rofi - Arch Wiki](https://wiki.archlinux.org/title/Rofi)
 4. [heart - gnuunixchad/dotfiles](https://github.com/gnuunixchad/dotfiles/blob/master/.local/bin/heart)
 
-![python-chan](python-chan.jpg)
+![Python-chan](python-chan.jpg)
