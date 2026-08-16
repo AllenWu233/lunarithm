@@ -95,11 +95,11 @@ name = "月影"
 url = "/categories/"
 weight = 40
 
-# [[menu.main]]
-# identifier = "tags"
-# name = "月痕"
-# url = "/tags/"
-# weight = 50
+[[menu.main]]
+identifier = "tags"
+name = "月痕"
+url = "/tags/"
+weight = 50
 
 [[menu.main]]
 identifier = "links"
@@ -116,7 +116,7 @@ weight = 90
 
 [taxonomies]
 category = "categories"
-# tag = "tags"
+tag = "tags"
 series = "series"
 
 
